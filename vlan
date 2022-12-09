@@ -1,0 +1,27 @@
+#Configuring vlan
+
+
+import netmiko
+
+# Defining device parameters
+
+devicel = {
+'device type':
+'cisco ios'
+'ip': '192.168.2.1'
+'username"
+'cisco'
+'password': 'cisco secret'
+'cisco'
+}
+# Connecting to the device
+
+net connect = netmiko.ConnectHandler (**devicel)
+
+#Entering enable mode net connect.enable ()
+
+#Configuring vlan
+
+session.send command set ('conf t' 'ip address 192.168.2.1 255.255.255.0', 'vlan 10', 'name voice', 'exit',
+'int vlan 10', 'name unit A' 'exit', 'int vlan 201, 'int f0/0/0', 'no shutdown' "exit', 'conf t', 'vlan 201,
+'ip address 192.168.2.1 255.255.255.0', 'no shutdown', 'exit', 'switchport mode access', 'switchport access vlan 20')
